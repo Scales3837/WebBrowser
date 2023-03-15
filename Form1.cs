@@ -32,10 +32,10 @@ namespace Learn
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 webForm = new Form2(); // Create new instance of the new form.
+            Form2 webForm = new Form2(textBox1.Text); // Create new instance of the new form.
 
             webForm.Show(); // Show it
-            this.Hide(); // Hide the current form.
+            Hide(); // Hide the current form.
         }
     }
 }
