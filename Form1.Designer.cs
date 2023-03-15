@@ -33,6 +33,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // colorDialog1
@@ -41,9 +44,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 13);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Location = new System.Drawing.Point(12, 41);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 23);
+            this.button1.Size = new System.Drawing.Size(197, 41);
             this.button1.TabIndex = 0;
             this.button1.Text = "Change background colour";
             this.button1.UseVisualStyleBackColor = true;
@@ -80,11 +84,33 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter website url";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.Location = new System.Drawing.Point(12, 91);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(143, 41);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Change font";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 31);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Customise";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1424, 557);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
@@ -94,6 +120,7 @@
             this.Name = "Form1";
             this.Text = "Home";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,6 +132,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

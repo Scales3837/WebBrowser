@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Xml;
 
 namespace Learn
 {
@@ -19,6 +20,15 @@ namespace Learn
         public void InitializeChromium(string Url)
         {
             // Create a browser component
+            try
+            {
+                Uri check = new Uri(Url);
+            }
+            catch (UriFormatException)
+            {
+                notifyIcon1.ShowBalloonTip(1000);
+                return;
+            }
             chromeBrowser = new ChromiumWebBrowser(Url);
             // Add it to the form and fill it to the form window.
             this.Controls.Add(chromeBrowser);

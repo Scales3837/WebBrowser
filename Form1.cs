@@ -37,5 +37,9 @@ namespace Learn
             webForm.Show(); // Show it
             Hide(); // Hide the current form.
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
